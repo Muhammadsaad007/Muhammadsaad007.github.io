@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b1020">
+  <meta name="description" content="Muhammad Saad — Java Backend Engineer specializing in Spring Boot microservices, distributed systems, and AI-assisted product discovery.">
+  <title>Muhammad Saad | Java Backend Engineer</title>
+  <style>
+    :root{--bg:#080d1a;--panel:rgba(17,25,45,.82);--text:#edf2ff;--muted:#a7b2cb;--line:rgba(159,180,220,.17);--mint:#72e0c1;--blue:#8ba7ff;--max:1120px}
+    *{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:85px}
+    body{margin:0;background:radial-gradient(ellipse at 82% 0%,rgba(75,105,220,.17),transparent 34rem),radial-gradient(ellipse at 5% 24%,rgba(61,207,172,.09),transparent 30rem),var(--bg);color:var(--text);font:16px/1.7 Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+    a{color:inherit;text-decoration:none}a:focus-visible{outline:2px solid var(--mint);outline-offset:4px}.container{width:min(var(--max),calc(100% - 40px));margin:auto}
+    .nav-wrap{position:sticky;top:0;z-index:10;backdrop-filter:blur(18px);background:rgba(8,13,26,.82);border-bottom:1px solid var(--line)}
+    nav{min-height:72px;display:flex;align-items:center;justify-content:space-between;gap:24px}.brand{font-weight:850;letter-spacing:-.04em;font-size:1.05rem}.brand span{color:var(--mint)}
+    .nav-links{display:flex;align-items:center;gap:23px;color:var(--muted);font-size:.9rem}.nav-links a:hover{color:var(--text)}
+    .nav-cta,.button{display:inline-flex;align-items:center;justify-content:center;gap:9px;border-radius:999px;padding:11px 17px;font-weight:750;font-size:.9rem;transition:transform .2s ease}
+    .nav-cta,.button.primary{background:var(--mint);color:#07131a}.button.secondary{border:1px solid var(--line);background:rgba(255,255,255,.025);color:var(--text)}.button:hover,.nav-cta:hover{transform:translateY(-2px)}
+    .hero{padding:100px 0 78px;display:grid;grid-template-columns:1.25fr .75fr;align-items:center;gap:56px}
+    .eyebrow{color:var(--mint);font-size:.78rem;font-weight:800;letter-spacing:.17em;text-transform:uppercase;display:flex;align-items:center;gap:10px}.eyebrow:before{content:"";width:25px;height:1px;background:var(--mint)}
+    h1{margin:18px 0;font-size:clamp(2.8rem,6.2vw,5.3rem);line-height:1.03;letter-spacing:-.065em}h1 .gradient{background:linear-gradient(100deg,var(--mint),#a7b9ff 75%);color:transparent;background-clip:text;-webkit-background-clip:text}
+    .hero-copy{max-width:660px;color:var(--muted);font-size:1.1rem}.hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:29px}.quick-facts{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}.fact,.tag{border:1px solid var(--line);border-radius:999px;background:rgba(255,255,255,.025);color:#c7d1e7}.fact{padding:7px 12px;font-size:.82rem}
+    .hero-card{position:relative;border:1px solid rgba(139,167,255,.25);border-radius:28px;padding:27px;background:linear-gradient(145deg,rgba(25,37,67,.92),rgba(13,20,37,.92));box-shadow:0 30px 90px rgba(0,0,0,.22);overflow:hidden}.hero-card:before{content:"";position:absolute;width:190px;height:190px;border-radius:50%;right:-75px;top:-90px;background:rgba(114,224,193,.13)}
+    .status{display:inline-flex;align-items:center;gap:8px;color:var(--mint);font-size:.8rem;font-weight:750}.status:before{content:"";width:7px;height:7px;border-radius:50%;background:var(--mint);box-shadow:0 0 0 5px rgba(114,224,193,.12)}
+    .code-window{margin-top:25px;padding:20px;border:1px solid var(--line);border-radius:17px;background:rgba(4,8,17,.55);font:.86rem/1.9 ui-monospace,SFMono-Regular,Menlo,monospace;color:#bdc9e4;overflow-wrap:anywhere}.key{color:var(--blue)}.value{color:var(--mint)}
+    section{padding:66px 0}.section-heading{display:flex;align-items:end;justify-content:space-between;gap:24px;margin-bottom:28px}.section-heading h2{margin:0;font-size:clamp(1.9rem,3.5vw,2.8rem);letter-spacing:-.05em;line-height:1.15}.section-heading p{max-width:480px;margin:0;color:var(--muted)}
+    .panel{border:1px solid var(--line);border-radius:22px;background:var(--panel);padding:26px}.about-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:20px}.about-copy p{color:var(--muted);margin:0 0 14px}.about-copy p:last-child{margin-bottom:0}
+    .highlight-list{display:grid;gap:12px}.highlight{display:flex;gap:13px;align-items:flex-start}.icon-box{flex:0 0 39px;width:39px;height:39px;display:grid;place-items:center;border-radius:12px;color:var(--mint);background:rgba(114,224,193,.09);border:1px solid rgba(114,224,193,.15);font-weight:800}.highlight strong{display:block}.highlight span{display:block;color:var(--muted);font-size:.91rem}
+    .skills-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.skill-card h3,.project-card h3,.job h3{margin:0 0 10px;font-size:1.08rem;letter-spacing:-.02em}.skill-card p{margin:0;color:var(--muted);font-size:.94rem}.tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:17px}.tag{display:inline-block;padding:5px 10px;font-size:.77rem}
+    .timeline{display:grid;gap:16px}.job{display:grid;grid-template-columns:185px 1fr;gap:24px}.job-date{color:var(--mint);font-size:.82rem;font-weight:800;padding-top:4px}.job-company{color:var(--muted);margin-top:-5px;font-size:.92rem}.job ul{color:var(--muted);padding-left:19px;margin:14px 0 0}.job li{margin:7px 0;padding-left:3px}.job li::marker{color:var(--mint)}
+    .projects-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}.project-card{display:flex;flex-direction:column;min-height:100%}.project-type{color:var(--mint);text-transform:uppercase;letter-spacing:.12em;font-size:.72rem;font-weight:800;margin-bottom:10px}.project-card p{color:var(--muted);margin:0}.project-card .tags{margin-top:auto;padding-top:17px}
+    .education-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}.education-card p{margin:4px 0;color:var(--muted)}.award{color:var(--mint);font-size:.85rem;font-weight:750;margin-top:11px}
+    .contact-panel{display:flex;align-items:center;justify-content:space-between;gap:28px;padding:36px;border:1px solid rgba(114,224,193,.25);border-radius:26px;background:linear-gradient(120deg,rgba(114,224,193,.08),rgba(139,167,255,.09))}.contact-panel h2{margin:0 0 9px;font-size:clamp(1.8rem,4vw,2.7rem);letter-spacing:-.05em}.contact-panel p{color:var(--muted);margin:0}.contact-actions{display:flex;flex-wrap:wrap;gap:10px}
+    footer{padding:28px 0 36px;color:#7f8ca8;border-top:1px solid var(--line);font-size:.84rem}footer .container{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}.small-note{color:#8190ac;font-size:.82rem;margin-top:16px}
+    @media(max-width:850px){.hero{grid-template-columns:1fr;gap:32px;padding-top:72px}.hero-card{max-width:620px}.about-grid,.skills-grid{grid-template-columns:repeat(2,1fr)}.section-heading{align-items:flex-start;flex-direction:column}}
+    @media(max-width:600px){.container{width:min(100% - 28px,var(--max))}nav{min-height:64px}.nav-links{gap:12px;font-size:.8rem}.nav-links a:not(.nav-cta){display:none}.nav-cta{padding:9px 12px}.hero{padding:62px 0 45px}h1{font-size:clamp(2.7rem,13vw,4.2rem)}section{padding:48px 0}.about-grid,.skills-grid,.projects-grid,.education-grid{grid-template-columns:1fr}.job{grid-template-columns:1fr;gap:7px}.panel{padding:21px}.contact-panel{align-items:flex-start;flex-direction:column;padding:25px}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important}}
+  </style>
+</head>
+<body>
+  <div class="nav-wrap"><nav class="container" aria-label="Main navigation">
+    <a class="brand" href="#home">Muhammad<span>.</span>Saad</a>
+    <div class="nav-links"><a href="#about">About</a><a href="#skills">Skills</a><a href="#experience">Experience</a><a href="#projects">Projects</a><a class="nav-cta" href="#contact">Contact ↗</a></div>
+  </nav></div>
+
+  <main>
+    <header class="container hero" id="home">
+      <div>
+        <div class="eyebrow">Java Backend Engineer</div>
+        <h1>Building reliable backends and <span class="gradient">practical AI systems.</span></h1>
+        <p class="hero-copy">I’m Muhammad Saad, a backend engineer with 5+ years of experience building Java and Spring Boot applications, microservices, and data-driven features. I enjoy turning complex requirements into maintainable APIs and exploring practical AI-powered product experiences.</p>
+        <div class="hero-actions"><a class="button primary" href="#experience">Explore my work ↓</a><a class="button secondary" href="mailto:Muhammadsaad1238@gmail.com">Email me ↗</a></div>
+        <div class="quick-facts"><span class="fact">Java · Spring Boot</span><span class="fact">Microservices</span><span class="fact">AI & Similarity Search</span><span class="fact">Karachi, Pakistan</span></div>
+      </div>
+      <aside class="hero-card" aria-label="Technical profile">
+        <div class="status">Backend engineering · AI exploration</div>
+        <div class="code-window">
+          <div><span class="key">engineer</span>: <span class="value">"Muhammad Saad"</span></div>
+          <div><span class="key">focus</span>: [</div>
+          <div>&nbsp;&nbsp;<span class="value">"Spring Boot microservices"</span>,</div>
+          <div>&nbsp;&nbsp;<span class="value">"REST APIs & event-driven systems"</span>,</div>
+          <div>&nbsp;&nbsp;<span class="value">"AI-assisted product discovery"</span></div>
+          <div>]</div>
+          <div><span class="key">principles</span>: <span class="value">"Clean · Secure · Maintainable"</span></div>
+        </div>
+        <p class="small-note">A practical engineering mindset: clear boundaries, reliable integrations, and measurable product value.</p>
+      </aside>
+    </header>
+
+    <section id="about"><div class="container">
+      <div class="section-heading"><h2>About me</h2><p>Backend development grounded in solid engineering fundamentals, with a growing focus on applied AI.</p></div>
+      <div class="about-grid">
+        <div class="panel about-copy">
+          <p>I’m a Java Backend Engineer experienced in developing and extending backend services across fintech, product, and inventory-related use cases. My core work centers on Java, Spring Boot, REST APIs, persistence, security, and microservice-based application design.</p>
+          <p>I care about readable code, thoughtful domain boundaries, and dependable integrations. I’ve worked with asynchronous messaging, containerized services, and hands-on Kubernetes test environments, and I continue to explore how AI and vector similarity can improve product discovery.</p>
+          <p>Alongside professional work, I build independent projects to learn, test ideas, and demonstrate potential client-facing features.</p>
+        </div>
+        <div class="panel highlight-list">
+          <div class="highlight"><div class="icon-box">01</div><div><strong>Backend & APIs</strong><span>Java, Spring Boot, REST, WebClient, OpenFeign and data access.</span></div></div>
+          <div class="highlight"><div class="icon-box">02</div><div><strong>Distributed systems</strong><span>Microservices, Kafka events, service discovery and secure service communication.</span></div></div>
+          <div class="highlight"><div class="icon-box">03</div><div><strong>Applied AI</strong><span>Image detection workflows, local vision-language models and vector similarity search.</span></div></div>
+          <div class="highlight"><div class="icon-box">04</div><div><strong>Architecture</strong><span>DDD concepts, Clean/Hexagonal Architecture and SOLID principles.</span></div></div>
+        </div>
+      </div>
+    </div></section>
+
+    <section id="skills"><div class="container">
+      <div class="section-heading"><h2>Technical toolkit</h2><p>Technologies and practices I’ve used in professional work, independent projects, or test environments.</p></div>
+      <div class="skills-grid">
+        <article class="panel skill-card"><h3>Languages & frameworks</h3><p>Backend development and reactive or synchronous service integrations.</p><div class="tags"><span class="tag">Java 8 / 17</span><span class="tag">Spring Boot</span><span class="tag">Spring WebFlux</span><span class="tag">Spring Data JPA</span><span class="tag">Hibernate</span><span class="tag">Python</span></div></article>
+        <article class="panel skill-card"><h3>APIs & architecture</h3><p>Service boundaries, maintainability, and API-driven systems.</p><div class="tags"><span class="tag">REST APIs</span><span class="tag">WebClient</span><span class="tag">OpenFeign</span><span class="tag">DDD</span><span class="tag">SOLID</span><span class="tag">Clean Architecture</span></div></article>
+        <article class="panel skill-card"><h3>Messaging & data</h3><p>Relational persistence and asynchronous service communication.</p><div class="tags"><span class="tag">Apache Kafka</span><span class="tag">PostgreSQL</span><span class="tag">MySQL</span><span class="tag">SQL Server</span><span class="tag">Qdrant</span></div></article>
+        <article class="panel skill-card"><h3>Security</h3><p>Application and identity concepts for protected APIs.</p><div class="tags"><span class="tag">Spring Security 6</span><span class="tag">OAuth2</span><span class="tag">JWT</span><span class="tag">Keycloak</span></div></article>
+        <article class="panel skill-card"><h3>Containers & observability</h3><p>Container workflows and hands-on testing in a Kubernetes environment.</p><div class="tags"><span class="tag">Docker</span><span class="tag">Kubernetes basics</span><span class="tag">Pods & scaling</span><span class="tag">Grafana (project use)</span></div></article>
+        <article class="panel skill-card"><h3>AI & testing</h3><p>Exploratory AI integrations and backend test practices.</p><div class="tags"><span class="tag">Ollama</span><span class="tag">LLaVA</span><span class="tag">YOLOv5</span><span class="tag">OpenCV</span><span class="tag">Mockito</span><span class="tag">Vector similarity</span></div></article>
+      </div>
+    </div></section>
+
+    <section id="experience"><div class="container">
+      <div class="section-heading"><h2>Career journey</h2><p>Professional experience and independent development, presented separately.</p></div>
+      <div class="timeline">
+        <article class="panel job">
+          <div class="job-date">FEB 2026 — PRESENT</div>
+          <div><h3>Java Backend Engineer</h3><div class="job-company">Nisum · BlueStone Innovations</div>
+            <ul>
+              <li>Contribute to an AI-assisted inventory and product-discovery system connecting image understanding with product data.</li>
+              <li>Work with local vision-language model workflows, including Ollama and a LLaVA-based model, for image classification and related AI features.</li>
+              <li>Use Python image-processing workflows with YOLOv5 and OpenCV, and Qdrant similarity search associated with PostgreSQL product records.</li>
+              <li>Support inventory-data updates as part of the product/order workflow.</li>
+            </ul>
+          </div>
+        </article>
+        <article class="panel job">
+          <div class="job-date">DEC 2021 — SEP 2024</div>
+          <div><h3>Java Backend Engineer</h3><div class="job-company">AZENTIO · FinTech / car-financing domain</div>
+            <ul>
+              <li>Developed backend functionality for financial and car-financing business workflows using Java 8/17 and Spring Boot.</li>
+              <li>Worked with domain-oriented microservices, service discovery with Eureka, and relational databases including PostgreSQL and MySQL.</li>
+              <li>Contributed to API security and containerized service workflows using Docker and Kubernetes in the development/test context.</li>
+              <li>Applied maintainable service design and backend integration practices across evolving requirements.</li>
+            </ul>
+          </div>
+        </article>
+        <article class="panel job">
+          <div class="job-date">AUG 2019 — SEP 2021</div>
+          <div><h3>Software Engineer</h3><div class="job-company">Basecamp · Camera monitoring application</div>
+            <ul>
+              <li>Worked on a camera-monitoring application that detected and counted people in camera images.</li>
+              <li>Used Ultralytics YOLOv5 and OpenCV-Python for computer-vision functionality.</li>
+              <li>Worked with SQL Server and collaborated with a two-developer team, independently implementing assigned features.</li>
+            </ul>
+          </div>
+        </article>
+        <article class="panel job">
+          <div class="job-date">SEP 2024 — JAN 2026</div>
+          <div><h3>Independent Backend Projects</h3><div class="job-company">Personal development · Microservices practice</div>
+            <ul>
+              <li>Built a Spring Boot microservices project covering inventory, product, order, notification, and payment-related services.</li>
+              <li>Integrated services using REST APIs, WebClient, and OpenFeign; explored asynchronous event flows with Kafka.</li>
+              <li>Practiced request-duplication checks, database workflows, Spring Security/OAuth2/Keycloak concepts, and unit tests with Mockito.</li>
+              <li>Containerized services with Docker and tested Kubernetes concepts including pods and scaling in a test environment.</li>
+            </ul>
+          </div>
+        </article>
+      </div>
+    </div></section>
+
+    <section id="projects"><div class="container">
+      <div class="section-heading"><h2>Selected projects</h2><p>Independent projects and applied technical work that complement my professional experience.</p></div>
+      <div class="projects-grid">
+        <article class="panel project-card"><div class="project-type">AI · Personal project</div><h3>AI-assisted product discovery</h3><p>Explored an AI feature concept that could be pitched to clients whose websites need smarter product discovery. The workflow combines image classification, local vision-language models, and similarity search linked to product records.</p><div class="tags"><span class="tag">Ollama</span><span class="tag">LLaVA</span><span class="tag">Qdrant</span><span class="tag">PostgreSQL</span><span class="tag">OpenCV</span></div></article>
+        <article class="panel project-card"><div class="project-type">Backend · Personal project</div><h3>Spring Boot microservices</h3><p>A learning project organized around product, inventory, order, notification, and payment services. It explores service-to-service communication, event-driven updates, persistence, authentication concepts, and unit testing.</p><div class="tags"><span class="tag">Spring Boot</span><span class="tag">Kafka</span><span class="tag">WebClient</span><span class="tag">OpenFeign</span><span class="tag">Mockito</span></div></article>
+        <article class="panel project-card"><div class="project-type">Computer vision · Professional experience</div><h3>Camera monitoring & people counting</h3><p>Computer-vision functionality for a camera-monitoring application to detect and count people in images, using an Ultralytics YOLOv5 and OpenCV-Python workflow.</p><div class="tags"><span class="tag">YOLOv5</span><span class="tag">OpenCV-Python</span><span class="tag">SQL Server</span></div></article>
+        <article class="panel project-card"><div class="project-type">Learning · Test environment</div><h3>Containerized service testing</h3><p>Hands-on practice packaging services with Docker and experimenting with Kubernetes pods and scaling commands in a test environment. Grafana was also used in a personal/test project.</p><div class="tags"><span class="tag">Docker</span><span class="tag">Kubernetes</span><span class="tag">Grafana</span></div></article>
+      </div>
+      <p class="small-note">Project descriptions are intentionally high-level. Add public GitHub repository links to the relevant cards when you’re ready to share code.</p>
+    </div></section>
+
+    <section id="education"><div class="container">
+      <div class="section-heading"><h2>Education & recognition</h2><p>Academic foundation and continued learning.</p></div>
+      <div class="education-grid">
+        <article class="panel education-card"><h3>Bachelor’s degree — BSICT</h3><p>ISRA University · Hyderabad, Sindh, Pakistan</p><p>January 2016 – December 2019</p><div class="award">Gold Medalist · CGPA 3.50 / 4.00</div></article>
+        <article class="panel education-card"><h3>TechCom Programming Competition</h3><p>2018–2019</p><div class="award">Runner-up</div><p class="small-note">Professional development: <a href="https://www.udemy.com/course/master-microservices-with-spring-docker-kubernetes/" target="_blank" rel="noopener noreferrer" style="color:var(--blue);text-decoration:underline">Master Microservices with Spring, Docker & Kubernetes (Udemy) ↗</a></p></article>
+      </div>
+    </div></section>
+
+    <section id="contact"><div class="container">
+      <div class="contact-panel">
+        <div><h2>Let’s build something useful.</h2><p>Open to discussing backend engineering, microservices, and practical AI product ideas.</p><p class="small-note">Karachi, Pakistan · Muhammadsaad1238@gmail.com · +92 317 1064866</p></div>
+        <div class="contact-actions"><a class="button primary" href="mailto:Muhammadsaad1238@gmail.com">Send an email ↗</a><a class="button secondary" href="https://linkedin.com/in/muhammad-saad-6494761b7" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a></div>
+      </div>
+    </div></section>
+  </main>
+  <footer><div class="container"><span>© <span id="year">2026</span> Muhammad Saad</span><span>Designed with HTML & CSS · Responsive by default</span></div></footer>
+  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+</body>
+</html>
